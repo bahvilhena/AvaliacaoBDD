@@ -1,20 +1,15 @@
 package stepDefinitions;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Quando;
-import pageObjects.Cadastro;
 import pageObjects.DriverFactory;
+import pageObjects.PageObjectCadastro;
 
-public class Steps {
+public class StepsCadastro {
 	
-	Cadastro cadastro;
+	PageObjectCadastro cadastro;
 	
 	public static WebDriver driver;
 	
@@ -30,7 +25,7 @@ public class Steps {
 	@Quando("^preencho todos campos do formulario$")
 	public void preencho_todos_campos_do_formulario() throws Throwable {
 		
-		cadastro = new Cadastro(driver);
+		cadastro = new PageObjectCadastro(driver);
 		cadastro.dadospreenchimentocorreto();
 		
 
@@ -48,7 +43,7 @@ public class Steps {
 	@Quando("^preencho todos campos do formulario com erro$")
 	public void preencho_todos_campos_do_formulario_com_erro() throws Throwable {
 	    
-		cadastro = new Cadastro(driver);
+		cadastro = new PageObjectCadastro(driver);
 		cadastro.dadospreenchimentoincorreto();
 	}
 

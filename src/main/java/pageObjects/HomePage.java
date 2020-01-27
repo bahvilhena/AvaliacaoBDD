@@ -1,12 +1,8 @@
 package pageObjects;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
@@ -22,4 +18,15 @@ public class HomePage {
 		return element;
 
 	}
+	
+	public static WebElement busca_produto(WebDriver driver) {
+
+		element = driver.findElement(By.id("autoComplete"));
+
+		return element;
+
+	}
+	
+	
+	
 }

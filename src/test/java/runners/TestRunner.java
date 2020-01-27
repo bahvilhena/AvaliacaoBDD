@@ -6,9 +6,9 @@ import cucumber.api.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
- features = "src/test/resources/funcionalTests/End2End_Test.feature",
- glue= {"stepDefinitions"}
- 
+ features = "src\\test\\resources\\funcionalTests\\",
+ glue= {"stepDefinitions"} ,
+ tags= {"@Pesquisa"}
  )
 
 public class TestRunner {
@@ -16,4 +16,3 @@ public class TestRunner {
 	
 
 }
-
