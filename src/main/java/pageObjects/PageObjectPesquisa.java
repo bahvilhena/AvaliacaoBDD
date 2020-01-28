@@ -2,11 +2,14 @@ package pageObjects;
 
 
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Utils.Screenshoot;
 
 
 
@@ -20,9 +23,10 @@ public class PageObjectPesquisa {
 		
 		HomePage.busca_produto(driver).sendKeys(mouse);
 		driver.findElement(By.id("29")).click();
-		//assertTrue(driver.findElement(By.id("29")).isEnabled());
+		Assert.assertTrue(driver.findElement(By.id("29")).isEnabled());
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("bunny")));
+		Screenshoot.getScreenshot(driver);
 		
 }
 	
@@ -34,7 +38,8 @@ public static void busca_negativo(WebDriver driver) throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.id("virtualFooter")));
-		//assertTrue(driver.getPageSource().contains("No results for"));
+		Assert.assertTrue(driver.getPageSource().contains("No results for"));
+		Screenshoot.getScreenshot(driver);
 }
 	
 	}

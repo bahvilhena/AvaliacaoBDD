@@ -6,9 +6,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-
-
 public class DriverFactory {
 
 	static WebDriver driver;
@@ -42,19 +39,5 @@ public class DriverFactory {
 
 		}
 	}
-	
-	public static WebDriver inicializarChromeBusca() throws Exception {
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://www.advantageonlineshopping.com/");
-		driver.manage().window().maximize();
-		if (driver == null) {
-			driver = new ChromeDriver();
-		}
 
-		{
-			return driver;
-
-		}
-	}
 }

@@ -1,18 +1,17 @@
 #language: pt
 
-@Cadastro
+
 Funcionalidade: Cadastro
 
+Contexto: entrar na pagina
+Dado que entro na pagina de registros
 
-Cenario: Cadastrar usuario com sucesso
+@Cadastro1
+Cenario: Cadastrar usuario novo com sucesso 
+Quando eu preencho todos campos do formulario 
+Entao vai registrar com sucesso
 
-Dado que entro na pagina de registro
-Quando preencho todos campos do formulario
-E sou registrado com sucesso
-
-
+@Cadastro2
 Cenario: Cadastrar usuario sem sucesso
-
-Dado que entro na pagina de registro
-Quando preencho todos campos do formulario com erro
-E não consigo registrar
+Quando preencho todos os campos do formulario com erro
+Entao nao consigo registrar o usuario

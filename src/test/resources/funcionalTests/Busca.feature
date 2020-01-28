@@ -1,17 +1,15 @@
 #language: pt
 
-@Busca
 Funcionalidade: Busca por Produto na HomePage
+Contexto:Entrar no site advance
+Dado que entro na home inicial
 
-
+@BuscaProdutoTelaInicialComSucesso
 Cenario: Buscar produto com sucesso
+Quando clico no produto com sucesso
+Entao  localizarar o produto
 
-Dado que entro na pagina inicial
-E clico no produto com sucesso
-
-
+@BuscaProdutoTelaInicialComFalha
 Cenario: Buscar produto sem sucesso
-
-Dado que entro na pagina inicial
-E clico em um produto e localiza outro 
+Entao  nao achara o produto
 

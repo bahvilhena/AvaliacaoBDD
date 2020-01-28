@@ -100,6 +100,14 @@ public class PageObjectCadastro {
 		txtbx_codigopostal.sendKeys(codigopostal);
 	}
 	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formCover\"]/div[4]/span")
+	private WebElement btn_promotion;
+	
+	public void promotion() {
+		btn_promotion.isSelected();
+	}
+	
+	
 	@FindBy(how = How.CSS , using = "div#formCover > sec-view > div > input")
 	private WebElement btn_aceite;
 	
@@ -116,7 +124,7 @@ public class PageObjectCadastro {
 	
 	public void dadospreenchimentocorreto() {
 		
-		enter_usuario("brauliiio");
+		enter_usuario("finalbra2");
 		enter_email("braulio@teste4.com");
 		enter_senha("Abc123");
 		enter_confirmasenha("Abc123");
@@ -128,7 +136,6 @@ public class PageObjectCadastro {
 		enter_endereco("rua mana");
 		enter_estado("sao paul");
 		enter_codigopostal("2323232");
-		aceite();
 				
 		
 	}
@@ -146,8 +153,8 @@ public class PageObjectCadastro {
 		enter_cidade("sao paulo");
 		enter_endereco("rua mana");
 		enter_estado("sao paul");
-		enter_codigopostal("2323232");
-		aceite();
+		enter_codigopostal("232345578232");
+	
 				
 		
 	}
