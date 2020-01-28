@@ -10,13 +10,9 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
- features = "src\\test\\resources\\funcionalTests\\",
- glue= {"stepDefinitions"},
- plugin = {"pretty" , "html: report/relatorio.html"})
+@CucumberOptions(features = "src\\test\\resources\\funcionalTests\\", glue = { "stepDefinitions" }, plugin = { "pretty",
+		"html: report/relatorio.html" })
 
 public class TestRunnerCadastro {
-
-	
 
 }
