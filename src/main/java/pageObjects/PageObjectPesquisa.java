@@ -1,6 +1,6 @@
 package pageObjects;
 
-import static org.junit.Assert.assertTrue;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,8 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.com.rsinet.hub_tdd.actions.HomePage;
-import br.com.rsinet.hub_tdd.cadastro.ExcelUtils;
+
 
 
 

@@ -2,13 +2,11 @@ package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Quando;
 import pageObjects.DriverFactory;
 import pageObjects.PageObjectPesquisa;
 
-public class stepPesquisa {
+public class StepsPesquisa {
 
 	PageObjectPesquisa pageobjectpesquisa;
 	
@@ -21,22 +19,23 @@ public class stepPesquisa {
 		
 	}
 
-	@Quando("^pesquiso o produto$")
-	public void pesquiso_o_produto() throws Throwable {
+	@Dado("^pesquiso o produto localizo com sucesso$")
+	public void pesquiso_o_produto_localizo_com_sucesso() throws Throwable {
+	 
+	
 	    
 		pageobjectpesquisa.busca_positivo(driver);
+		driver.quit();
 		
 	}
 
-	@Quando("^localizo com sucesso$")
-	public void localizo_com_sucesso() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
+	
 
-	@Quando("^não localizo o produto$")
-	public void não_localizo_o_produto() throws Throwable {
+	@Dado("^pesquiso o produto não localizo o produto$")
+	public void pesquiso_o_produto_não_localizo_o_produto() throws Throwable {
+	  
 	pageobjectpesquisa.busca_negativo(driver);
+	driver.quit();
 	}
 
 	

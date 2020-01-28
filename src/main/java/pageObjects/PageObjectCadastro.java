@@ -116,7 +116,7 @@ public class PageObjectCadastro {
 	
 	public void dadospreenchimentocorreto() {
 		
-		enter_usuario("braulio");
+		enter_usuario("brauliiio");
 		enter_email("braulio@teste4.com");
 		enter_senha("Abc123");
 		enter_confirmasenha("Abc123");

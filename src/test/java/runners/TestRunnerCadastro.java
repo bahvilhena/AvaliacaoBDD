@@ -7,11 +7,11 @@ import cucumber.api.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
  features = "src\\test\\resources\\funcionalTests\\",
- glue= {"stepDefinitions"} ,
- tags= {"@Pesquisa"}
+ glue= {"stepDefinitions"} 
+// tags= {"@Busca"}
  )
 
-public class TestRunner {
+public class TestRunnerCadastro {
 	
 	
 
